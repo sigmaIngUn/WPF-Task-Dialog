@@ -71,14 +71,53 @@ You can read more as well as see screenshots [here][4].
 
 ## Details ##
 
-- Project created in Visual Studio 2010
-- .NET 4.0 Client Profile
+- Project created in Visual Studio 2022
+- .NET 6.0
 - Uses the native TaskDialogIndirect API when available (Vista/7)
 - Licensed under [The Code Project Open License (CPOL) 1.02][5]
     - Can be freely redistributed
     - Can be modified
     - Can be used in commercial software
     - No warranty/guarantee
+- As the library is compiled against .NET 6, which requires at least Win 7 SP1,
+  it will always run with the native TaskDialogIndirect API and never fallback
+  to emulation mode. The legacy code is however kept in the project (for now).
+
+## NuGet Generation ##
+
+A NuGet package is automatically generated as part of building the **TaskDialiog** project.
+However, for the NuGet to be published correctly, the package **Version** must be increased.
+
+
+#### Optional: If you have Azure DevOps artifacts store: ####
+1. Only once, see "Download and install the Azure Artifacts Credential Provider" below.
+2. Only once, configure a nuget repository name (see below).
+3. In Visual Studio, Menu **Tools -> NuGet Package Manager -> Package Manager Console**.
+4. From the Package Manager Console window, replace the placeholders and run:
+
+	    dotnet nuget push --source "<NuGet Repository Name>" --api-key az --interactive .\TaskDialog\bin\<Configuration>\WPFTaskDialog.<Major>.<Minor>.<Build>.nupkg
+5. If this needed to enter Azure credentials, the command will output the message below.
+   Follow the instructions and re-run the command. 
+   To sign in, use a web browser to open the page https://microsoft.com/devicelogin and
+   enter the code ....... to authenticate.
+
+
+#### Download and install the Azure Artifacts Credential Provider ####
+Manual installation on Windows:
+1. Download the latest release of Microsoft.NuGet.CredentialProvider.zip 
+   from https://github.com/Microsoft/artifacts-credprovider/releases.
+2. Unzip the file.
+3. Copy the netcore (and netfx for nuget.exe) directory from the extracted 
+   archive to `%UserProfile%\\.nuget\plugins\`. Create the plugins directory if needed.
+
+
+#### Configuring a nuget repository name ####
+-----------------------------------
+1. Either configure a global nuget repository in Visual Studio
+   **Tools -> Options -> NuGet Package Manager -> Package Options**.
+2. Create a `nuget.config` in the solution directory.
+
+In both cases, consult Azure Devops to obtaine the artifact store URL.
 
 [1]: http://msdn.microsoft.com/en-us/library/bb760544%28v=vs.85%29.aspx
 [2]: http://www.codeproject.com/KB/vista/Vista_TaskDialog_Wrapper.aspx
