@@ -9,7 +9,7 @@
     <Copyright>© Sean A. Hanley 2012</Copyright>
     <Company>Microsoft</Company>
     <Product>TaskDialog</Product>
-    <Version>2.0.0</Version>
+    <Version>2.0.1</Version>
     <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
     <PackageId>WPFTaskDialog</PackageId>
     <PackageProjectUrl>https://github.com/yadyn/WPF-Task-Dialog</PackageProjectUrl>
