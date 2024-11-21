@@ -1,66 +1,58 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-
-	<PropertyGroup>
-		<TargetFramework>net6.0-windows</TargetFramework>
-		<UseWPF>true</UseWPF>
-	</PropertyGroup>
-
-	<PropertyGroup>
-		<Title>WPF Task Dialog</Title>
-		<Description>A TaskDialog wrapper class with fallback emulator (for XP and earlier).</Description>
-		<Copyright>© Sean A. Hanley 2012</Copyright>
-		<Company>Microsoft</Company>
-		<Product>TaskDialog</Product>
-		<Version>2.0.0</Version>
-		<AllowUnsafeBlocks>True</AllowUnsafeBlocks>
-		<PackageId>WPFTaskDialog</PackageId>
-		<PackageProjectUrl>https://github.com/yadyn/WPF-Task-Dialog</PackageProjectUrl>
-		<PackageLicenseExpression>CPOL-1.02</PackageLicenseExpression>
-		<PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
-		<Authors>Sean A. Hanley, Hedley Muscroft</Authors>
-		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-	</PropertyGroup>
-
-	<ItemGroup>
-		<None Remove="Resources\cmdarr1.png" />
-		<None Remove="Resources\cmdarr2.png" />
-		<None Remove="Resources\cmdarr3.png" />
-		<None Remove="Resources\exparr-down1.bmp" />
-		<None Remove="Resources\exparr-down2.bmp" />
-		<None Remove="Resources\exparr-down3.bmp" />
-		<None Remove="Resources\exparr-up1.bmp" />
-		<None Remove="Resources\exparr-up2.bmp" />
-		<None Remove="Resources\exparr-up3.bmp" />
-		<None Remove="Resources\shield-16.png" />
-		<None Remove="Resources\shield-32.png" />
-	</ItemGroup>
-
-	<ItemGroup>
-		<Page Remove="DesignData\DesignerCommandLink.xaml" />
-		<Page Remove="DesignData\DesignerTaskDialogViewModel.xaml" />
-	</ItemGroup>
-
-	<ItemGroup>
-		<DesignData Include="DesignData\DesignerCommandLink.xaml" />
-		<DesignData Include="DesignData\DesignerTaskDialogViewModel.xaml" />
-	</ItemGroup>
-
-	<ItemGroup>
-	  <PackageReference Include="System.Drawing.Common" Version="6.0.0" />
-	</ItemGroup>
-
-	<ItemGroup>
-		<Resource Include="Resources\cmdarr1.png" />
-		<Resource Include="Resources\cmdarr2.png" />
-		<Resource Include="Resources\cmdarr3.png" />
-		<Resource Include="Resources\exparr-down1.bmp" />
-		<Resource Include="Resources\exparr-down2.bmp" />
-		<Resource Include="Resources\exparr-down3.bmp" />
-		<Resource Include="Resources\exparr-up1.bmp" />
-		<Resource Include="Resources\exparr-up2.bmp" />
-		<Resource Include="Resources\exparr-up3.bmp" />
-		<Resource Include="Resources\shield-16.png" />
-		<Resource Include="Resources\shield-32.png" />
-	</ItemGroup>
-
+  <PropertyGroup>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Title>WPF Task Dialog</Title>
+    <Description>A TaskDialog wrapper class with fallback emulator (for XP and earlier).</Description>
+    <Copyright>© Sean A. Hanley 2012</Copyright>
+    <Company>Microsoft</Company>
+    <Product>TaskDialog</Product>
+    <Version>2.0.0</Version>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <PackageId>WPFTaskDialog</PackageId>
+    <PackageProjectUrl>https://github.com/yadyn/WPF-Task-Dialog</PackageProjectUrl>
+    <PackageLicenseExpression>CPOL-1.02</PackageLicenseExpression>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+    <Authors>Sean A. Hanley, Hedley Muscroft</Authors>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="Resources\cmdarr1.png" />
+    <None Remove="Resources\cmdarr2.png" />
+    <None Remove="Resources\cmdarr3.png" />
+    <None Remove="Resources\exparr-down1.bmp" />
+    <None Remove="Resources\exparr-down2.bmp" />
+    <None Remove="Resources\exparr-down3.bmp" />
+    <None Remove="Resources\exparr-up1.bmp" />
+    <None Remove="Resources\exparr-up2.bmp" />
+    <None Remove="Resources\exparr-up3.bmp" />
+    <None Remove="Resources\shield-16.png" />
+    <None Remove="Resources\shield-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Remove="DesignData\DesignerCommandLink.xaml" />
+    <Page Remove="DesignData\DesignerTaskDialogViewModel.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <DesignData Include="DesignData\DesignerCommandLink.xaml" />
+    <DesignData Include="DesignData\DesignerTaskDialogViewModel.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="System.Drawing.Common" Version="8.0.11" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\cmdarr1.png" />
+    <Resource Include="Resources\cmdarr2.png" />
+    <Resource Include="Resources\cmdarr3.png" />
+    <Resource Include="Resources\exparr-down1.bmp" />
+    <Resource Include="Resources\exparr-down2.bmp" />
+    <Resource Include="Resources\exparr-down3.bmp" />
+    <Resource Include="Resources\exparr-up1.bmp" />
+    <Resource Include="Resources\exparr-up2.bmp" />
+    <Resource Include="Resources\exparr-up3.bmp" />
+    <Resource Include="Resources\shield-16.png" />
+    <Resource Include="Resources\shield-32.png" />
+  </ItemGroup>
 </Project>
